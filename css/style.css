@@ -1,0 +1,48 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+    margin: 40px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+#header {
+    grid-area: header;
+}
+
+#nav {
+    grid-area: nav;
+}
+
+#aside {
+    grid-area: aside;
+}
+
+#footer {
+    grid-area:footer;
+}
+
+#article {
+    grid-area: article;
+}
+
+
+#wrapper{
+    display: grid;
+    grid-template-columns: repeat(1fr, 3);
+    gap: 5px;
+    grid-template-areas: 
+    "header nav nav"
+    "aside footer article";
+}
+
+
+#wrapper > div{
+    background-color: bisque;
+    border-radius: 5px;
+    padding: 10px;
+    height: 45vh;
+}
